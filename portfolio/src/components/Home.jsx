@@ -5,10 +5,10 @@ import '../App.css'
 
 const Home = () => {
   return (
-    <div className="bg-[#252439] w-full  text-white ">
-      <div className="max-w-[1000px] h-screen mx-auto flex flex-col md:flex-row justify-center items-center">
+    <div className="bg-[#252439] w-full text-white ">
+      <div className="max-w-[1080px] mx-auto pt-[100px] h-screen px-4 flex flex-col md:flex-row justify-center items-center">
         
-        <div className=" flex flex-col flex-1 ">
+        <div className=" flex flex-col flex-1 mb-5 ">
           <h1 className=" text-6xl">Aashish Katila</h1>
           <div className="text-3xl mt-4">
             <span className="mr-4">-----</span>
@@ -46,8 +46,8 @@ const Home = () => {
         </div>
 
         {/* Image  */}
-        <div className="flex flex-1 ">
-          <img src={landing} className="pl-20" alt="Home" />
+        <div className="flex flex-1 py-6 ">
+          <img src={landing} className="px-10" alt="Home" />
         </div>
       </div>
     </div>
