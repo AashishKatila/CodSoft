@@ -17,14 +17,16 @@ const About = () => {
             {/* Image */}
           </div>
           <div className="flex-1 mx-2">
-            <h2 className="text-5xl  ">About Me _____<div></div></h2>
-            <p className="mt-4 text-gray-300 text-lg ">
+            <div className="flex">
+            <h2 className="text-5xl  ">About Me </h2> <div className="border-b-2 border-white w-12 ml-2"></div>
+            </div>
+            <p className="mt-6 text-gray-300 text-lg leading-8  ">
               With 10 years experience as a professional Web developer, I have
               acquired the skills and knowledge necessary to make your project a
               success. I enjoy every step of the design process, from discussion
               and collaboration.
             </p>
-            <div className="mt-4">
+            <div className="mt-6">
               {/* CV Button */}
             <button className="flex text-black  bg-[#ffffff] px-8 py-4 rounded-2xl items-center font-semibold ">Download CV <FaRegFileAlt className="ml-2" size={24} /></button>
             </div>
