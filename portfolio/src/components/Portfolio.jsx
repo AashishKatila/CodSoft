@@ -112,7 +112,7 @@ const Portfolio = () => {
 
   return (
     <div className=" bg-[#252439] text-white w-full ">
-      <div className="flex flex-col md:flex-row bg-[#252439] max-w-[1080px] mx-auto pt-[100px] h-screen ">
+      <div className="flex flex-col md:flex-row max-w-[1080px] mx-auto pt-[100px] h-screen ">
         {/* First Column */}
         <div className="w-1/2 p-4 mx-auto">
           <div className="flex mb-10">
@@ -138,7 +138,7 @@ const Portfolio = () => {
         {/* Second Column */}
         <div className="w-1/2 p-4 ">
           {/* Content Tabs */}
-          <div className="flex justify-center mb-4">
+          <div className="flex justify-center pb-4">
             <button
               className={`mr-4 py-4 px-8 rounded-lg   ${
                 selectedContent === "skills"
