@@ -6,6 +6,7 @@ import note from "../assets/note.png";
 import movieland from "../assets/movieland.png";
 import pokemon from "../assets/pokemon.png";
 import weather from "../assets/weather.png";
+import '../App.css'
 
 const projectsList = [
   {
@@ -53,15 +54,16 @@ const Projects = () => {
     ],
   };
 
+
   return (
-    <div className="w-full bg-[#FFC448] pt-1 ">
+    <div className="w-full bg-[#FFC448] pt-1 " name="projects" >
       <div className="flex flex-col px-4 h-screen max-w-[1080px] mx-auto justify-center ">
         <div className=" text-5xl  font-semibold my-8 ">
           Look at my
           <br />
           recent projects ___
         </div>
-        <Slider {...settings} className="mt-4 ">
+        <Slider {...settings} className="mt-4 " style={{ padding: "0 20px" }} >
           {projectsList.map((project, index) => (
             <div key={index} className="mb-2 text-center ">
               <img
@@ -73,12 +75,13 @@ const Projects = () => {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-lg underline "
+                className="text-2xl underline "
               >
                 {project.name}
               </a>
             </div>
           ))}
+         
         </Slider>
       </div>
     </div>

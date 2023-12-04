@@ -14,8 +14,8 @@ const Navbar = () => {
         <ul className="hidden md:flex justify-center items-center ">
           <li className="px-6 cursor-pointer ">Home</li>
           <li className="px-6 cursor-pointer ">About</li>
-          <li className="px-6 cursor-pointer ">Skills</li>
           <li className="px-6 cursor-pointer ">Portfolio</li>
+          <li className="px-6 cursor-pointer ">Projects</li>
           <li className="px-6 cursor-pointer ">Contact</li>
         </ul>
       </div>
