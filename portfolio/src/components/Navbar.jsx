@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaTimes } from "react-icons/fa";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [nav, setNav] = useState();
@@ -12,11 +13,31 @@ const Navbar = () => {
     <div className="fixed w-full h-[80px] bg-[#252439] flex justify-center items-center text-gray-300 text-lg p-6 ">
       <div>
         <ul className="hidden md:flex justify-center items-center ">
-          <li className="px-6 cursor-pointer ">Home</li>
-          <li className="px-6 cursor-pointer ">About</li>
-          <li className="px-6 cursor-pointer ">Portfolio</li>
-          <li className="px-6 cursor-pointer ">Projects</li>
-          <li className="px-6 cursor-pointer ">Contact</li>
+          <li className="px-6 cursor-pointer ">
+            <Link to="home" smooth={true} duration={700}>
+              Home
+            </Link>
+          </li>
+          <li className="px-6 cursor-pointer ">
+            <Link to="about" smooth={true} duration={700}>
+              About
+            </Link>
+          </li>
+          <li className="px-6 cursor-pointer ">
+            <Link to="portfolio" smooth={true} duration={700}>
+              Portfolio
+            </Link>
+          </li>
+          <li className="px-6 cursor-pointer ">
+            <Link to="projects" smooth={true} duration={700}>
+              Projects
+            </Link>
+          </li>
+          <li className="px-6 cursor-pointer ">
+            <Link to="contact" smooth={true} duration={700}>
+              Contact
+            </Link>
+          </li>
         </ul>
       </div>
 
