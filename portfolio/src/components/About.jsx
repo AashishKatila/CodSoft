@@ -1,6 +1,8 @@
 import React from "react";
 import about from "../assets/about.png";
 import { FaRegFileAlt } from "react-icons/fa";
+import CV from "../assets/CV.pdf";
+
 
 const About = () => {
   return (
@@ -15,7 +17,7 @@ const About = () => {
           {/* 2nd col  */}
           <div className="flex-1 mx-2">
             <div className="flex">
-              <h2 className="text-5xl  ">About Me </h2>{" "}
+              <h2 className="text-5xl text-white ">About Me </h2>{" "}
               <div className="border-b-2 border-white w-12 ml-2"></div>
             </div>
             <p className="mt-6 text-gray-300 text-lg leading-8  ">
@@ -29,9 +31,12 @@ const About = () => {
             </p>
             <div className="mt-6">
               {/* CV Button */}
-              <button className="flex text-black  bg-[#ffffff] px-8 py-4 rounded-2xl items-center font-semibold   ">
+              <a download href={CV} > 
+              <button  className="flex text-black  bg-[#ffffff] px-8 py-4 rounded-2xl items-center font-semibold   ">
+                
                 Download CV <FaRegFileAlt className="ml-2" size={24} />
               </button>
+              </a>
             </div>
             {/* </div> */}
           </div>

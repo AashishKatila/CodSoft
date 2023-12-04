@@ -7,6 +7,7 @@ import {
   FaRegPaperPlane,
 } from "react-icons/fa";
 import "../App.css";
+import { Link } from "react-scroll";
 
 const Home = () => {
   return (
@@ -29,9 +30,12 @@ const Home = () => {
             {/* buttons */}
             <div className="flex mt-8">
               <button className="flex justify-center items-center mx-2 rounded-xl bg-[#6244C5] p-4 transition-colors duration-500 ease-in-out hover:bg-white hover:text-black ">
-                Buy Me a Coffee <FaRegPaperPlane className="mx-2" />
+              <Link to="contact" smooth={true} duration={700} className="flex items-center">
+              Buy Me a Coffee <FaRegPaperPlane className="mx-2" />
+            </Link>  
               </button>
-              <button className="mx-6 custom-btn">My Works</button>
+              <button className="mx-6 custom-btn">
+              <Link to="projects" smooth={true} duration={700} >My Works</Link></button>
             </div>
 
             {/* Social Icons  */}
