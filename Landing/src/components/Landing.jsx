@@ -26,7 +26,7 @@ const Landing = () => {
 				</div>
 				<div className="px-8 ">
 					<img
-						src={rocket} // Replace with the actual path to your rocket illustration
+						src={rocket} 
 						alt="Rocket Illustration"
 						className="h-64"
 					/>
