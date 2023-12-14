@@ -1,6 +1,7 @@
 import React from 'react'
 import Landing from './components/Landing'
 import Sponsor from './components/Sponsor'
+import Works from './components/Works'
 
 
 const App = () => {
@@ -8,6 +9,7 @@ const App = () => {
     <>
     <Landing />
     <Sponsor />
+    <Works />
     </>
 
   )
