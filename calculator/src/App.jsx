@@ -1,6 +1,7 @@
 import React,{useReducer} from 'react'
 import './App.css'
 import DigitButton from './DigitButton'
+import OperationButton from './OperationButton'
 
 export const ACTIONS = {
   ADD_DIGIT: 'add-digit',
@@ -19,12 +20,28 @@ function reducer(state,{type,payload}){
       //To not add multiple decimal
       if(payload.digit === "." && state.currentOperand.includes(".")) return state
 
+      //To display each digit on the screen of calculator
       return{
         ...state,
         currentOperand: `${state.currentOperand || ""}${payload.digit}`,
       }
+      //FOR AC button
       case ACTIONS.CLEAR:
         return {}
+
+      //When operators are clicked
+      case ACTIONS.CHOOSE_OPERATION:
+        if(state.currentOperand == null && state.previousOperand == null ) return state
+
+        if(state.previousOperand == null){
+          return{
+            ...state,
+            operation: payload.operation,
+            previousOperand : state.currentOperand,
+            currentOperand: null
+          }
+        }
+
   }
 }
 
@@ -42,22 +59,26 @@ const App = () => {
       
       <button className='span-two' onClick={() =>dispatch({type: ACTIONS.CLEAR})} >AC</button>
       <button >DEL</button>
-      <button >/</button>
+      <OperationButton operation='/' dispatch={dispatch} />
       
       <DigitButton digit='1' dispatch={dispatch} />
       <DigitButton digit='2' dispatch={dispatch} />
       <DigitButton digit='3' dispatch={dispatch} />
-      <button >*</button>
+      <OperationButton operation='*' dispatch={dispatch} />
       
       <DigitButton digit='4' dispatch={dispatch} />
       <DigitButton digit='5' dispatch={dispatch} />
       <DigitButton digit='6' dispatch={dispatch} />
-      <button >+</button>
+      <OperationButton operation='+' dispatch={dispatch} />
+
+
 
       <DigitButton digit='7' dispatch={dispatch} />
       <DigitButton digit='8' dispatch={dispatch} />
       <DigitButton digit='9' dispatch={dispatch} />
-      <button >-</button>
+      <OperationButton operation='-' dispatch={dispatch} />
+
+ 
 
       <DigitButton digit='.' dispatch={dispatch} />
       <DigitButton digit='0' dispatch={dispatch} />
