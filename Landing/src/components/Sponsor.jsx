@@ -19,13 +19,14 @@ const Sponsor = () => {
     <div className=" pb-20">
 				<div className="flex justify-center items-center">
 					{companies.map((company) => (
+						
 						<div className="h-10 mx-4 " key={company.name}>
 							<img
 								src={company.logo}
 								alt={company.name}
 								className="grayscale"
 							/>
-							{/* <p>{company.name}</p> */}
+					
 						</div>
 					))}
 				</div>
